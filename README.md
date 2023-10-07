@@ -1,5 +1,42 @@
 # README #
 
+## From 'spicelib' to 'newSpice'
+**Why would I create the newSpice rather than using existed libraries such as 'spicelib' or 'pySpice'?**
+
+These are all excellent packages with different features and functionalities. However, they all have their own shortcomings 
+(or we can say they might have to do that in their specified circumstances).
+
+For example:
+
+* The _'pySpice'_ can serve as a complete working flow as *netlist_edit -> run_simulation -> python_data_process*.
+But it's a bit complex to learn and start on. Besides, it only supports *NGSpice* and *Xyce*.
+* The _'spicelib'_ (originated from 'PyLTSpice') is much more simple to learn and start on, and it is supposed to support more simulators.
+However, it is inconvenient in netlist editing, and its current user experience in a whole simulation working flow is unclear.
+
+_The above statements are only my personal opinion and should be only used as suggestions._
+
+**What will _newSpice_ do in the future?**
+
+* We provide an **easy-to-use** and **complete simulation working flow**. It basically contains three parts:
+  * Netlist creating, editing, import and export.
+  * Simulation running.
+  * Data processing and visualization.
+* We support user to use our methods or their own methods in any steps in the above working flow.
+  * The codes are designed to be **Simple**, **Modular**, **extendable**, well-exampled and well documented.
+  * You don't need to learn how to use our netlist editor, but we invite you to experience.
+  * Each step is as a single module, you can call it at any time you want.
+* **The basic idea: using a Pythonic way to perform and extend SPICE simulation.**
+
+*We would like to provide you all these features as soon as possible, however, it takes time and efforts.*
+*Please wait patiently. We appreciate any help match the above principles.*
+
+---
+
+# The Original spicelib Readme
+(We basically forked from this project, so in the early phase of newSpice, please refer to the spicelib documentation).
+
+---
+
 spicelib is a toolchain of python utilities design to interact with spice simulators, as for example:
   * LTspice
   * NGSpice

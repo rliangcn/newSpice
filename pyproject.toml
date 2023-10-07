@@ -5,18 +5,18 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 [project]
-name = "spicelib"
-version = "0.4"
+name = "newSpice"
+version = "0.0.0"
 authors = [
-  { name="Nuno Brum", email="me@nunobrum.com" },
+  { name="Robert Liang", email="lshy@mail.ustc.edu.cn" },
 ]
-description = "A set of tools to Automate Spice simulations"
+description = "A NEW pythonic way to perform SPICE simulations."
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.8"
 dependencies = [
     "numpy",
-    "scipy",
+#    "scipy",
     "psutil",
     "clipboard",
     "matplotlib",
@@ -44,5 +44,5 @@ rawconvert = "spicelib.raw.raw_convert:main"
 run_server = "spicelib.run_server:main"
 
 [project.urls]
-"Homepage" = "https://github.com/nunobrum/spicelib"
-"Bug Tracker" = "https://github.com/nunobrum/spicelib/issues"
+"Homepage" = "https://github.com/rliangcn/newSpice/"
+"Based Project" = "https://github.com/nunobrum/spicelib/"
