@@ -1,8 +1,8 @@
-from spicelib import RawRead
-from spicelib.sim.sim_runner import SimRunner
-from spicelib.editor.spice_editor import SpiceEditor
-from spicelib.simulators.qspice_simulator import Qspice
-from spicelib.utils.sweep_iterators import sweep_log
+from newSpice import RawRead
+from newSpice.sim.sim_runner import SimRunner
+from newSpice.editor.spice_editor import SpiceEditor
+from newSpice.simulators.qspice_simulator import Qspice
+from newSpice.utils.sweep_iterators import sweep_log
 
 
 def processing_data(raw_file, log_file):

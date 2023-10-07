@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-from spicelib.log.ltsteps import LTSpiceLogReader
+from newSpice.log.ltsteps import LTSpiceLogReader
 
 data = LTSpiceLogReader("./testfiles/Batch_Test_AD820_15.log")
 

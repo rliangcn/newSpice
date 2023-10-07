@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Union
 import logging
 
-_logger = logging.getLogger("spicelib.BaseEditor")
+_logger = logging.getLogger("newSpice.BaseEditor")
 
 UNIQUE_SIMULATION_DOT_INSTRUCTIONS = ('.AC', '.DC', '.TRAN', '.NOISE', '.DC', '.TF')
 SPICE_DOT_INSTRUCTIONS = (
@@ -262,7 +262,7 @@ class BaseEditor(ABC):
             NotImplementedError - In case the circuit element is defined in a format which is not supported by this
             version.
 
-            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/spicelib
+            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/newSpice
         """
         ...
 
@@ -286,7 +286,7 @@ class BaseEditor(ABC):
 
             NotImplementedError - In case the circuit element is defined in a format which is not supported by this version.
 
-            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/spicelib
+            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/newSpice
         """
         ...
 

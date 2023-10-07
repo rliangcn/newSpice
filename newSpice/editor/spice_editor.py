@@ -24,7 +24,7 @@ import logging
 from .base_editor import BaseEditor, format_eng, ComponentNotFoundError, ParameterNotFoundError, PARAM_REGEX, \
     UNIQUE_SIMULATION_DOT_INSTRUCTIONS
 
-_logger = logging.getLogger("spicelib.SpiceEditor")
+_logger = logging.getLogger("newSpice.SpiceEditor")
 from typing import Union, List, Callable, Any, Tuple
 from ..utils.detect_encoding import detect_encoding, EncodingDetectError
 
@@ -508,7 +508,7 @@ class SpiceCircuit(BaseEditor):
             NotImplementedError - In case the circuit element is defined in a format which is not supported by this
             version.
 
-            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/spicelib
+            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/newSpice
         """
         self._set_model_and_value(device, value)
 
@@ -531,7 +531,7 @@ class SpiceCircuit(BaseEditor):
 
             NotImplementedError - In case the circuit element is defined in a format which is not supported by this version.
 
-            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/spicelib
+            If this is the case, use GitHub to start a ticket.  https://github.com/nunobrum/newSpice
         """
         self._set_model_and_value(element, model)
 
@@ -614,7 +614,7 @@ class SpiceCircuit(BaseEditor):
         Adding search paths for libraries. By default, the local directory and the
         ~username/"Documents/LTspiceXVII/lib/sub will be searched forehand. Only when a library is not found in these
         paths then the paths added by this method will be searched.
-        Alternatively spicelib.SpiceEditor.LibSearchPaths.append(paths) can be used."
+        Alternatively newSpice.SpiceEditor.LibSearchPaths.append(paths) can be used."
 
         :param paths: Path to add to the Search path
         :type paths: str
@@ -836,7 +836,7 @@ class SpiceEditor(SpiceCircuit):
                 #     for _ in lines:  # Consuming the rest of the file.
                 #         pass  # print("Ignoring %s" % _)
         elif self.create_blank:
-            lines = ['* netlist generated from spicelib', '.end']
+            lines = ['* netlist generated from newSpice', '.end']
             finished = self._add_lines(lines)
             if not finished:
                 raise SyntaxError("Netlist with missing .END or .ENDS statements")

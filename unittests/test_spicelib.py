@@ -10,7 +10,7 @@
 #  ███████║██║     ██║╚██████╗███████╗███████╗██║██████╔╝
 #  ╚══════╝╚═╝     ╚═╝ ╚═════╝╚══════╝╚══════╝╚═╝╚═════╝
 #
-# Name:        test_spicelib.py
+# Name:        test_newSpice.py
 # Purpose:     Tool used to launch Spice simulation in batch mode. Netlsts can
 #              be updated by user instructions
 #
@@ -27,11 +27,11 @@
 @maintainer:    Nuno Brum
 @email:         me@nunobrum.com
 
-@file:          test_spicelib.py
+@file:          test_newSpice.py
 @date:          2022-09-19
 
-@note           spicelib ltsteps + sim_commander + raw_read unit test
-                  run ./test/unittests/test_spicelib
+@note           newSpice ltsteps + sim_commander + raw_read unit test
+                  run ./test/unittests/test_newSpice
 """
 
 import os  # platform independent paths
@@ -45,13 +45,13 @@ import unittest  # performs test
 
 sys.path.append(
     os.path.abspath((os.path.dirname(os.path.abspath(__file__)) + "/../")))  # add project root to lib search path
-from spicelib.log.ltsteps import LTSpiceLogReader
-from spicelib.raw.raw_read import RawRead
-from spicelib.editor.spice_editor import SpiceEditor
-from spicelib.sim.sim_runner import SimRunner
+from newSpice.log.ltsteps import LTSpiceLogReader
+from newSpice.raw.raw_read import RawRead
+from newSpice.editor.spice_editor import SpiceEditor
+from newSpice.sim.sim_runner import SimRunner
 
 def has_ltspice_detect():
-    from spicelib.simulators.ltspice_simulator import LTspice
+    from newSpice.simulators.ltspice_simulator import LTspice
     global ltspice_simulator
     ltspice_simulator = LTspice
     return isinstance(LTspice.spice_exe, list) and os.path.exists(LTspice.spice_exe[0])
@@ -67,8 +67,8 @@ print("test_dir", test_dir)
 # ------------------------------------------------------------------------------
 
 
-class test_spicelib(unittest.TestCase):
-    """Unnittesting spicelib"""
+class test_newSpice(unittest.TestCase):
+    """Unnittesting newSpice"""
     # *****************************
     @unittest.skipIf(skip_ltspice_tests, "Skip if not in windows environment")
     def test_batch_test(self):
@@ -76,7 +76,7 @@ class test_spicelib(unittest.TestCase):
         @note   inits class
         """
         print("Starting test_batch_test")
-        from spicelib.simulators.ltspice_simulator import LTspice
+        from newSpice.simulators.ltspice_simulator import LTspice
         # prepare
         self.sim_files = []
         self.measures = {}
@@ -435,7 +435,7 @@ class test_spicelib(unittest.TestCase):
         print("Starting test_ac_analysis")
         from numpy import pi, angle
         if has_ltspice:
-            from spicelib.editor.asc_editor import AscEditor
+            from newSpice.editor.asc_editor import AscEditor
             editor = AscEditor(test_dir + "AC.asc")
             runner = SimRunner(output_folder=test_dir, simulator=ltspice_simulator)
             raw_file, log_file = runner.run_now(editor)
@@ -468,7 +468,7 @@ class test_spicelib(unittest.TestCase):
         print("Starting test_ac_analysis_steps")
         from numpy import pi, angle
         if has_ltspice:
-            from spicelib.editor.asc_editor import AscEditor
+            from newSpice.editor.asc_editor import AscEditor
             editor = AscEditor(test_dir + "AC - STEP.asc")
             runner = SimRunner(output_folder=test_dir, simulator=ltspice_simulator)
             raw_file, log_file = runner.run_now(editor)
@@ -508,7 +508,7 @@ class test_spicelib(unittest.TestCase):
 
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
-    print("Starting tests on spicelib")
+    print("Starting tests on newSpice")
     unittest.main()
-    print("Tests completed on spicelib")
+    print("Tests completed on newSpice")
 # ------------------------------------------------------------------------------

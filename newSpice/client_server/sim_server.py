@@ -22,13 +22,13 @@ from typing import Tuple
 from xmlrpc.client import Binary
 from xmlrpc.server import SimpleXMLRPCServer
 import logging
-_logger = logging.getLogger("spicelib.SimServer")
+_logger = logging.getLogger("newSpice.SimServer")
 
 import threading
 from pathlib import Path
 import zipfile
 import io
-from spicelib.client_server.srv_sim_runner import ServerSimRunner
+from newSpice.client_server.srv_sim_runner import ServerSimRunner
 import uuid
 
 

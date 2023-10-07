@@ -29,7 +29,7 @@ def main():
     from numpy import abs as mag, angle as phase_np
     from numpy import angle, arange
 
-    from spicelib import RawRead
+    from newSpice import RawRead
 
     def what_to_units(whattype):
         """Determines the unit to display on the plot Y axis"""

@@ -154,7 +154,7 @@ class RawWrite(object):
         if len(self._imported_data):
             self._consolidate()
         f = open(filename, 'wb')
-        f.write("Title: * spicelib RawWrite\n".encode(self.encoding))
+        f.write("Title: * newSpice RawWrite\n".encode(self.encoding))
         f.write("Date: {}\n".format(strftime("%a %b %d %H:%M:%S %Y")).encode(self.encoding))
         f.write("Plotname: {}\n".format(self.plot_name).encode(self.encoding))
         f.write("Flags: {}\n".format(self._str_flags()).encode(self.encoding))

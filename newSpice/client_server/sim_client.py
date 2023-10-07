@@ -29,7 +29,7 @@ from dataclasses import dataclass
 import logging
 from typing import Union
 
-_logger = logging.getLogger("spicelib.SimClient")
+_logger = logging.getLogger("newSpice.SimClient")
 
 
 class SimClientInvalidRunId(LookupError):

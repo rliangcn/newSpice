@@ -1,5 +1,5 @@
-from spicelib import SpiceEditor
-from spicelib.simulators.ltspice_simulator import LTspice
+from newSpice import SpiceEditor
+from newSpice.simulators.ltspice_simulator import LTspice
 
 LTspice.create_netlist("./testfiles/Noise.asc")
 se = SpiceEditor("./testfiles/Noise.net")

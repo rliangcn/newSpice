@@ -25,10 +25,10 @@ LTSpice, update resistor values, or component models.
 The code snipped below will simulate a circuit with two different diode models, set the simulation
 temperature to 80 degrees, and update the values of R1 and R2 to 3.3k. ::
 
-    from spicelib.sim.sim_runner import SimRunner
-    from spicelib.sim.sweep import sweep
-    from spicelib.editor.spice_editor import SpiceEditor
-    from spicelib.sim.ltspice_simulator import LTspice
+    from newSpice.sim.sim_runner import SimRunner
+    from newSpice.sim.sweep import sweep
+    from newSpice.editor.spice_editor import SpiceEditor
+    from newSpice.sim.ltspice_simulator import LTspice
 
     runner = SimRunner(simulator=LTspice, parallel_sims=4)
     editor = SpiceEditor("my_circuit.net")
@@ -109,7 +109,7 @@ from pathlib import Path
 from time import sleep, thread_time as clock
 from typing import Callable, Union, Any, Type, Protocol, Optional
 import logging
-_logger = logging.getLogger("spicelib.SimRunner")
+_logger = logging.getLogger("newSpice.SimRunner")
 
 from .process_callback import ProcessCallback
 from ..sim.run_task import RunTask, clock_function

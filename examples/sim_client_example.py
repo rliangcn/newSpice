@@ -23,12 +23,12 @@ import zipfile
 import logging
 
 # In order for this, to work, you need to have a server running. To start a server, run the following command:
-# python -m spicelib.run_server --port 9000 --parallel 4 --output ./temp
+# python -m newSpice.run_server --port 9000 --parallel 4 --output ./temp
 
-_logger = logging.getLogger("spicelib.SimClient")
+_logger = logging.getLogger("newSpice.SimClient")
 _logger.setLevel(logging.DEBUG)
 
-from spicelib.client_server.sim_client import SimClient
+from newSpice.client_server.sim_client import SimClient
 
 server = SimClient('http://localhost', 9000)
 print(server.session_id)

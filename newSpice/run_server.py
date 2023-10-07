@@ -20,7 +20,7 @@
 # -------------------------------------------------------------------------------
 import sys
 import argparse
-from spicelib.client_server.sim_server import SimServer
+from newSpice.client_server.sim_server import SimServer
 import time
 import keyboard
 
@@ -51,13 +51,13 @@ def main():
         args.parallel = 1
 
     if args.simulator == "LTSpice":
-        from spicelib.simulators.ltspice_simulator import LTspice
+        from newSpice.simulators.ltspice_simulator import LTspice
         simulator = LTspice
     elif args.simulator == "NGSpice":
-        from spicelib.simulators.ngspice_simulator import NGSpice
+        from newSpice.simulators.ngspice_simulator import NGSpice
         simulator = NGSpice
     elif args.simulator == "XYCE":
-        from spicelib.simulators.xyce_simulator import Xyce
+        from newSpice.simulators.xyce_simulator import Xyce
         simulator = Xyce
     else:
         raise ValueError(f"Simulator {args.simulator} is not supported")
@@ -76,10 +76,10 @@ def main():
 
 if __name__ == "__main__":
     import logging
-    log1 = logging.getLogger("spicelib.ServerSimRunner")
-    log2 = logging.getLogger("spicelib.SimServer")
-    log3 = logging.getLogger("spicelib.SimRunner")
-    log4 = logging.getLogger("spicelib.RunTask")
+    log1 = logging.getLogger("newSpice.ServerSimRunner")
+    log2 = logging.getLogger("newSpice.SimServer")
+    log3 = logging.getLogger("newSpice.SimRunner")
+    log4 = logging.getLogger("newSpice.RunTask")
     log1.setLevel(logging.INFO)
     log2.setLevel(logging.INFO)
     log3.setLevel(logging.INFO)

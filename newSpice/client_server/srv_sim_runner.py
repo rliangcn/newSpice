@@ -24,7 +24,7 @@ from typing import Union, List, Dict, Any
 from pathlib import Path
 import zipfile
 import logging
-_logger = logging.getLogger("spicelib.ServerSimRunner")
+_logger = logging.getLogger("newSpice.ServerSimRunner")
 
 from ..sim.sim_runner import SimRunner
 from ..editor.base_editor import BaseEditor

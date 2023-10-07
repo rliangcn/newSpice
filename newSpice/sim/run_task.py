@@ -32,7 +32,7 @@ import traceback
 from time import sleep
 from typing import Callable, Union, Any, Tuple, Type
 import logging
-_logger = logging.getLogger("spicelib.RunTask")
+_logger = logging.getLogger("newSpice.RunTask")
 
 from .process_callback import ProcessCallback
 from .simulator import Simulator

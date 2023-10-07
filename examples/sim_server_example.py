@@ -24,11 +24,11 @@ import time
 import keyboard
 import logging
 
-from spicelib.client_server.sim_server import SimServer
-from spicelib.simulators.ltspice_simulator import LTspice
+from newSpice.client_server.sim_server import SimServer
+from newSpice.simulators.ltspice_simulator import LTspice
 simulator = LTspice
 
-_logger = logging.getLogger("spicelib.SimServer")
+_logger = logging.getLogger("newSpice.SimServer")
 _logger.setLevel(logging.DEBUG)
 _logger.addHandler(logging.StreamHandler(sys.stdout))
 

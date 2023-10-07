@@ -1,6 +1,6 @@
-from spicelib import SimRunner
-from spicelib import AscEditor
-from spicelib.simulators.ltspice_simulator import LTspice
+from newSpice import SimRunner
+from newSpice import AscEditor
+from newSpice.simulators.ltspice_simulator import LTspice
 
 # Force another simulatior
 simulator = r"C:\Program Files\LTC\LTspiceXVII\XVIIx64.exe"

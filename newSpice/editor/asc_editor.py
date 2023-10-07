@@ -23,7 +23,7 @@ import logging
 from .base_editor import BaseEditor, format_eng, ComponentNotFoundError, ParameterNotFoundError, PARAM_REGEX, \
     UNIQUE_SIMULATION_DOT_INSTRUCTIONS
 
-_logger = logging.getLogger("spicelib.AscEditor")
+_logger = logging.getLogger("newSpice.AscEditor")
 
 TEXT_REGEX = re.compile(r"TEXT (-?\d+)\s+(-?\d+)\s+(Left|Right|Top|Bottom)\s\d+\s*(?P<type>[!;])(?P<text>.*)",
                         re.IGNORECASE)

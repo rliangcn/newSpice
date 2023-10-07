@@ -28,7 +28,7 @@ from typing import Iterable
 import pathlib
 from functools import wraps
 import logging
-_logger = logging.getLogger("spicelib.SimStepper")
+_logger = logging.getLogger("newSpice.SimStepper")
 from ..editor.base_editor import BaseEditor
 from .sim_runner import AnyRunner, SimRunner
 
@@ -198,7 +198,7 @@ class SimStepper(object):
 
 
 if __name__ == "__main__":
-    from spicelib.utils.sweep_iterators import *
+    from newSpice.utils.sweep_iterators import *
 
     test = SimStepper("../../tests/DC sweep.asc")
     test.verbose = True

@@ -21,7 +21,7 @@
 
 from pathlib import Path
 import logging
-_logger = logging.getLogger("spicelib.NGSpiceSimulator")
+_logger = logging.getLogger("newSpice.NGSpiceSimulator")
 
 from ..sim.simulator import Simulator, run_function
 

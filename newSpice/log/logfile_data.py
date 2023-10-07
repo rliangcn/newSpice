@@ -16,7 +16,7 @@ from collections import OrderedDict
 import math
 import logging
 
-_logger = logging.getLogger("spicelib.LTSteps")
+_logger = logging.getLogger("newSpice.LTSteps")
 
 
 class LTComplex(object):

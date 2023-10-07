@@ -24,7 +24,7 @@ import os
 from pathlib import Path
 from typing import Union
 import logging
-_logger = logging.getLogger("spicelib.LTSpiceSimulator")
+_logger = logging.getLogger("newSpice.LTSpiceSimulator")
 
 from ..sim.simulator import Simulator, run_function, SpiceSimulatorError
 

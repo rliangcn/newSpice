@@ -23,7 +23,7 @@ import os
 
 from pathlib import Path
 import logging
-_logger = logging.getLogger("spicelib.QSpiceSimulator")
+_logger = logging.getLogger("newSpice.QSpiceSimulator")
 
 from ..sim.simulator import Simulator, run_function, SpiceSimulatorError
 

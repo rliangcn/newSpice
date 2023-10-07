@@ -1,17 +1,17 @@
 # coding=utf-8
 import logging
 from rich.logging import RichHandler
-import spicelib
+import newSpice
 
-from spicelib import SimRunner, SpiceEditor
+from newSpice import SimRunner, SpiceEditor
 from time import sleep
 from random import random
 
-spicelib.set_log_level(logging.DEBUG)
-spicelib.add_log_handler(RichHandler())
+newSpice.set_log_level(logging.DEBUG)
+newSpice.add_log_handler(RichHandler())
 
 
-from spicelib.simulators.ltspice_simulator import LTspice
+from newSpice.simulators.ltspice_simulator import LTspice
 
 
 def processing_data(raw_file, log_file, supply_voltage, opamp):

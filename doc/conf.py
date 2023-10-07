@@ -19,7 +19,7 @@ print(sys.path)
 
 # -- Project information -----------------------------------------------------
 
-project = 'spicelib'
+project = 'newSpice'
 copyright = '2023, Nuno Brum'
 author = 'Nuno Brum'
 

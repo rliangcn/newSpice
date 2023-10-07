@@ -78,7 +78,7 @@ class Simulator(ABC):
 
 
     The ``run_function()`` can be imported from the simulator.py with
-    ``from spicelib.sim.simulator import run_function`` instruction.
+    ``from newSpice.sim.simulator import run_function`` instruction.
     """
     spice_exe = []
     process_name = ""

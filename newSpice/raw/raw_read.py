@@ -220,7 +220,7 @@ from ..utils.detect_encoding import detect_encoding
 import numpy as np
 from numpy import zeros, complex128, float32, float64, frombuffer, angle
 import logging
-_logger = logging.getLogger("spicelib.RawRead")
+_logger = logging.getLogger("newSpice.RawRead")
 
 
 def read_float64(f):
